@@ -1,5 +1,8 @@
 # Rachford-Rice Contest
 
+[This is a solution using mpmath for arbitrary precision that solves all cases, happy to see different ways to pass the tests - It turns out you need 25 digit accuracy to solve all the cases!
+] - [kpatvt@gmail.com](mailto:kpatvt@gmail.com)
+
 This is the 25 + 1 year anniversary version of the 1995 Rachford-Rice contest. Can you solve the Rachford-Rice problem for all these cases? With the initiative of Curtis Hays Whitson, and the extensive help by Aaron Zick, the original Rachford-Rice contest offered $1000 to any student who could solve the problem for all cases. Only three people were able to develop procedures that passed all the test, and none of these were students.
 
 Today we are happy to re-release the Rachford-Rice contest, but now for Python. There are several differences between the original contest and this version, the main one being that this version will focus mainly on passing all the tests and not that much on speed. A timer will be set for your calculations, so if you want to optimize for speed as well you are free to do so.
