@@ -1,7 +1,6 @@
 # Rachford-Rice Contest
 
-[This is a solution using mpmath for arbitrary precision that solves all cases, happy to see different ways to pass the tests - It turns out you need 25 digit accuracy to solve all the cases!
-] - [kpatvt@gmail.com](mailto:kpatvt@gmail.com)
+[Updated solutions using Decimal class instead of mpmath which gives a significant speedup - the check convergence functions have to be slightly updated so that they can verify convergence when using the Decimal class] - [kpatvt@gmail.com](mailto:kpatvt@gmail.com)
 
 This is the 25 + 1 year anniversary version of the 1995 Rachford-Rice contest. Can you solve the Rachford-Rice problem for all these cases? With the initiative of Curtis Hays Whitson, and the extensive help by Aaron Zick, the original Rachford-Rice contest offered $1000 to any student who could solve the problem for all cases. Only three people were able to develop procedures that passed all the test, and none of these were students.
 

@@ -7,7 +7,7 @@ EPS_M = float_info.epsilon
 
 
 def severity(R: float, eps: float):
-    return np.math.log10(R / eps) if R else -np.inf
+    return np.math.log10(float(R) / eps) if R else -np.inf
 
 
 def is_it_converged(test_severity: float):
@@ -28,6 +28,7 @@ def fraction_test(V: float, L: float):
 
 def matbal_test(V: float, yi: np.ndarray, L: float, xi: np.ndarray, zi: np.ndarray):
     eps_z = EPS_T
+    zi = np.array([type(xi[0])(i) for i in zi])
     matbal_severity = severity(
         np.max(np.abs(V * yi + L * xi - zi) / (np.abs(V * yi) + np.abs(L * xi) + zi)),
         eps_z,
@@ -37,6 +38,7 @@ def matbal_test(V: float, yi: np.ndarray, L: float, xi: np.ndarray, zi: np.ndarr
 
 def k_value_test(yi: np.ndarray, xi: np.ndarray, Ki: np.ndarray):
     eps_k = EPS_T
+    Ki = np.array([type(xi[0])(i) for i in Ki])
     kvalue_severity = severity(
         np.max(np.abs(yi - Ki * xi) / (np.abs(yi) + np.abs(Ki * xi))), eps_k
     )
